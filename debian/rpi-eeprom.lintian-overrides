@@ -1,0 +1,1 @@
+rpi-eeprom binary: uses-dpkg-database-directly usr/bin/rpi-eeprom-update

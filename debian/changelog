@@ -1,3 +1,9 @@
+rpi-eeprom (7.4-1ubuntu1~ppa1) groovy; urgency=medium
+
+  * Ubuntu port
+
+ -- Dave Jones <dave.jones@canonical.com>  Tue, 23 Jun 2020 14:45:28 +0100
+
 rpi-eeprom (7.4-1) buster; urgency=medium
 
   [ Tim Gover ]

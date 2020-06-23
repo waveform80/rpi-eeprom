@@ -1,0 +1,22 @@
+Author: Dave Jones <dave.jones@canonical.com>
+Description: Use rpi-eeprom checksums instead of rpi-eeprom-images
+--- a/rpi-eeprom-update
++++ b/rpi-eeprom-update
+@@ -176,7 +176,7 @@
+ }
+ 
+ applyUpdate() {
+-   checksums_file="/var/lib/dpkg/info/rpi-eeprom-images.md5sums"
++   checksums_file="/var/lib/dpkg/info/rpi-eeprom.md5sums"
+ 
+    [ "$(id -u)" = "0" ] || die "* Must be run as root - try 'sudo rpi-eeprom-update'"
+ 
+@@ -185,7 +185,7 @@
+          cd /
+          if ! md5sum -c "${checksums_file}" > /dev/null 2>&1; then
+             md5sum -c "${checksums_file}"
+-            die "rpi-eeprom-images checksums failed - try reinstalling this package"
++            die "rpi-eeprom checksums failed - try reinstalling this package"
+          fi
+       )
+    fi
